@@ -1,15 +1,25 @@
 ﻿@page "/"
+<style type="text/css">.sliders {
+	                       width: 75%
+                       }</style>
+
 
 <h1>RAISE Your Farm Efficiency</h1>
 
-
+<br/>
 <h3> Cost Saver Calculator</h3>
-<label for="customRange2" class="form-label">Farm size (approx):<b> @orMore @farmSize </b> Hectares </label>
-<input type="range" class="form-range" min="50" max="200" id="customRange2" step="5" @bind="@farmSize">
+<br/>
+<div class="sliders">
+	<label for="customRange2" class="form-label">Farm size (approx):<b> @orMore @farmSize </b> Hectares </label>
+	<input type="range" class="form-range" min="50" max="200" id="customRange2" step="5" @bind="@farmSize">
 
-<label for="customRange2" class="form-label2">Money you spend per season on pesticides & Fertilizers (approx): <b>@more @cost </b> euros </label>
-<input type="range" class="form-range" min="5000" max="200000" id="customRange2" step="5000" @bind="@cost">
-<p> You will save : <b> @SavedAmount </b> euros, which is <b>@SavedPercentage % </b> on your production cost</p>
+
+	<label for="customRange2" class="form-label2">Money you spend per season on pesticides & Fertilizers (approx): <b style="color: #FA0826; font-weight: bold ">@more @cost </b> euros </label>
+	<input type="range" class="form-range" min="5000" max="200000" id="customRange2" step="5000" @bind="@cost">
+	<p> You will save :  <b style="color: #45DD5C; font-weight: bold "> @SavedAmount </b> euros, which is <b style="color: #45DD5C; font-weight: bold ">@SavedPercentage % </b> on your production cost</p>
+
+</div>
+
 
 @code {
 
